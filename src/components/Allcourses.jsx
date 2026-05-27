@@ -57,7 +57,7 @@ const Allcourses = () => {
                   </div>
 
                   {/* Button */}
-                  <Link href={`/data/${data.id}`}>
+                  <Link href={`/courses/${data.id}`}>
                     <button className="w-full py-2 bg-lime-600 hover:bg-lime-700 text-white text-sm font-semibold rounded-lg transition-colors">
                       View Details
                     </button>
