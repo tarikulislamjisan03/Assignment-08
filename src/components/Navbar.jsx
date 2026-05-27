@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-0 z-40 w-full border-b border-divider bg-background/70 backdrop-blur-lg">
+    <nav className="fixed top-0 z-40 w-full border-b border-divider bg-background/70 backdrop-blur-lg bg-purple-400 ">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
 
         {/* Logo */}
@@ -40,7 +40,7 @@ const Navbar = () => {
           <Link href="/login" className="text-sm border border-divider px-4 py-1.5 rounded-lg hover:bg-default-100 transition-colors">
             Login
           </Link>
-          <Link href="/register" className="text-sm bg-primary px-4 py-1.5 rounded-lg hover:opacity-90">
+          <Link href="/register" className="text-sm text-white bg-primary px-4 py-1.5 rounded-lg hover:opacity-90">
             Sign In
           </Link>
         </div>
