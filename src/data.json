@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "title": "Machine Learning Masterclass",
+    "slug": "machine-learning-masterclass",
+    "instructor": "Dr. Asif Rahman",
+    "category": "Machine Learning",
+    "price": 4999,
+    "rating": 4.8,
+    "duration": "12 Weeks",
+    "lessons": 45,
+    "level": "Intermediate",
+    "image": "https://images.unsplash.com/photo-1527474305487-b87b222841cc?q=80&w=600&auto=format&fit=crop",
+    "description": "Learn supervised, unsupervised learning, regression, and building predictive models from scratch with Python.",
+    "curriculum": [
+      "Introduction to ML",
+      "Python for ML",
+      "Supervised Learning",
+      "Unsupervised Learning",
+      "Model Evaluation",
+      "Real World Projects"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Artificial Intelligence & Open AI",
+    "slug": "ai-and-open-ai",
+    "instructor": "Tanvir Hasan",
+    "category": "Artificial Intelligence",
+    "price": 5500,
+    "rating": 4.9,
+    "duration": "10 Weeks",
+    "lessons": 38,
+    "level": "Advanced",
+   "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=600&auto=format&fit=crop",
+    "description": "Master neural networks, NLP, Computer Vision, and integrate OpenAI APIs into real-world applications.",
+    "curriculum": [
+      "Intro to AI",
+      "Neural Networks",
+      "Natural Language Processing",
+      "Computer Vision",
+      "OpenAI API Integration",
+      "AI Project Deployment"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Data Science & Big Data Analytics",
+    "slug": "data-science-analytics",
+    "instructor": "Sajid Ahmed",
+    "category": "Data Science",
+    "price": 4500,
+    "rating": 4.7,
+    "duration": "14 Weeks",
+    "lessons": 60,
+    "level": "Beginner",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop",
+    "description": "Become a Data Scientist. Learn Pandas, NumPy, Data Visualization, and SQL for big data processing.",
+    "curriculum": [
+      "Python Basics",
+      "NumPy & Pandas",
+      "Data Visualization",
+      "SQL for Data Science",
+      "Big Data Processing",
+      "Capstone Project"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Deep Learning with TensorFlow & PyTorch",
+    "slug": "deep-learning-tensorflow-pytorch",
+    "instructor": "Dr. Asif Rahman",
+    "category": "Machine Learning",
+    "price": 6000,
+    "rating": 4.9,
+    "duration": "8 Weeks",
+    "lessons": 32,
+    "level": "Advanced",
+    "image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop",
+    "description": "Dive deep into Artificial Neural Networks, CNNs, RNNs, and train complex models using PyTorch.",
+    "curriculum": [
+      "Deep Learning Basics",
+      "TensorFlow Setup",
+      "Convolutional Neural Networks",
+      "Recurrent Neural Networks",
+      "PyTorch Fundamentals",
+      "Model Deployment"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Next.js & Tailwind Full-Stack Web Dev",
+    "slug": "nextjs-tailwind-fullstack",
+    "instructor": "Zayan Khan",
+    "category": "Web Development",
+    "price": 3500,
+    "rating": 4.6,
+    "duration": "16 Weeks",
+    "lessons": 75,
+    "level": "Intermediate",
+    "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=600&auto=format&fit=crop",
+    "description": "Build high-performance, SEO-friendly full-stack web applications using Next.js 15, Tailwind CSS, and MongoDB.",
+    "curriculum": [
+      "Next.js App Router",
+      "Tailwind CSS",
+      "Server Components",
+      "MongoDB Integration",
+      "Authentication",
+      "Deployment on Vercel"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Cyber Security & Ethical Hacking",
+    "slug": "cyber-security-ethical-hacking",
+    "instructor": "Rakib Islam",
+    "category": "Cyber Security",
+    "price": 4200,
+    "rating": 4.5,
+    "duration": "10 Weeks",
+    "lessons": 40,
+    "level": "Beginner",
+    "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=600&auto=format&fit=crop",
+    "description": "Learn network security, vulnerability assessment, and how to protect web apps from cyber threats safely.",
+    "curriculum": [
+      "Networking Basics",
+      "Linux for Security",
+      "Vulnerability Assessment",
+      "Web App Security",
+      "Ethical Hacking Tools",
+      "CTF Challenges"
+    ]
+  }
+]

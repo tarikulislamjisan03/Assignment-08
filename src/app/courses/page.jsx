@@ -1,11 +1,20 @@
-import React from 'react';
 
-const CoursePage = () => {
+import CourseData from "@/components/CourseCard";
+import datas from "@/data.json";
+const CoursePage =async () => {
+ 
+    console.log(datas)
     return (
         <div>
-            <h1>courses page</h1>
+         
+            <div className="grid grid-cols-3 gap-5 container mx-auto mt-10"> 
+
+                {
+                datas.map(data=><CourseData key={data.id} data={data}> </CourseData>)
+            }
+            </div>
         </div>
     );
 };
-
+ 
 export default CoursePage;
