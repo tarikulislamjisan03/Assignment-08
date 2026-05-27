@@ -13,7 +13,7 @@ const Banner = () => {
       pagination={{ clickable: true }}
       navigation={true}
       loop={true}
-      className="w-full h-[600px]"
+      className="w-full h-[700px]"
     >
       <SwiperSlide>
         <div
