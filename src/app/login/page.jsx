@@ -5,6 +5,7 @@ import { FcGoogle } from 'react-icons/fc';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { toast } from 'react-hot-toast'; 
+import { authClient } from '@/lib/authclient';
 
 const LoginPage = () => {
   const router = useRouter();
@@ -20,28 +21,22 @@ const LoginPage = () => {
     const password = formData.get("password");
 
     // 💡 ম্যানুয়াল ক্লায়েন্ট সাইড ভ্যালিডেশন
-    let currentErrors = {};
-    if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(email)) {
-      currentErrors.email = "Please enter a valid email address";
-    }
-    if (password.length < 8) {
-      currentErrors.password = "Password must be at least 8 characters";
-    } else if (!/[A-Z]/.test(password)) {
-      currentErrors.password = "Password must contain an uppercase letter";
-    } else if (!/[0-9]/.test(password)) {
-      currentErrors.password = "Password must contain a number";
-    }
+    
+const {data,error}=await authClient . signIn.email({
+  email,
+  password
+})
 
-    if (Object.keys(currentErrors).length > 0) {
-      setErrors(currentErrors);
-      return;
-    }
 
-    setLoading(true);
-    console.log("Submitted Successfully:", { email, password });
-    toast.success("Logged in successfully!");
-    router.push("/");
-    setLoading(false);
+  if(error){
+    toast.error(error.message)
+    return;
+  }
+
+  if(data){
+    toast.success("signin successfull")
+    router.push("/")
+  }
   };
 
   return (

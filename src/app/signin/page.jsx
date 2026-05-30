@@ -17,11 +17,15 @@ const SigninPage = () => {
   
     
     const formData = new FormData(e.currentTarget);
+    const name = formData.get("name");
     const email = formData.get("email");
+    const image = formData.get("image");
     const password = formData.get("password");
 
-  const {data,error}=await authClient.signIn.email({
+  const {data,error}=await authClient.signUp.email({
+    name,
     email,
+    image,
     password
   });
 
@@ -32,8 +36,8 @@ const SigninPage = () => {
   }
 
   if(data){
-    toast.success("Login successfull")
-    router.push("/")
+    toast.success("signin successfull")
+    router.push("/login")
   }
 
    
@@ -55,7 +59,7 @@ const SigninPage = () => {
             <input 
               required
               name="name"
-              type="name" 
+              type="text" 
               placeholder="Michael Corleone" 
               className="w-full px-4 py-2.5 bg-zinc-900 border border-zinc-700 rounded-xl text-white focus:outline-none focus:border-lime-500 transition-colors text-sm"
             />
@@ -74,6 +78,19 @@ const SigninPage = () => {
             />
             {errors.email && <p className="text-xs text-red-500 mt-0.5">{errors.email}</p>}
           </div>
+
+          {/* image */}
+            {/* Email Field */}
+          <div className="flex flex-col gap-1.5 w-full">
+            <label className="text-zinc-300 text-sm font-medium">Image Url</label>
+            <input 
+              required
+              name="image"
+              type="text" 
+              placeholder="https://image.com" 
+              className="w-full px-4 py-2.5 bg-zinc-900 border border-zinc-700 rounded-xl text-white focus:outline-none focus:border-lime-500 transition-colors text-sm"
+            />
+            </div> 
 
           {/* Password Field */}
           <div className="flex flex-col gap-1.5 w-full">
