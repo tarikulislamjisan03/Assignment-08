@@ -4,8 +4,11 @@ import { BiCheck } from 'react-icons/bi';
 import { FcGoogle } from 'react-icons/fc'; 
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { toast } from 'react-hot-toast'; 
+
 import { authClient } from '@/lib/authclient';
+
+
+import { toast } from 'react-toastify';
 
 const LoginPage = () => {
   const router = useRouter();
@@ -34,9 +37,11 @@ const {data,error}=await authClient . signIn.email({
   }
 
   if(data){
-    toast.success("signin successfull")
+  toast.success("Login successful!")
+  setTimeout(() => {
     router.push("/")
-  }
+  }, 1000) 
+}
   };
 
   return (
