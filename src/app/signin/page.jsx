@@ -43,14 +43,20 @@ const SigninPage = () => {
    
   };
 
+  const handlegoogle=async()=>{
+    console.log("google")
+    const data = await authClient.signIn.social({
+    provider: "google",
+  });
+  }
+
   return (
     <div className="min-h-[80vh] bg-base-100 flex items-center justify-center p-4 text-white">
       
-      {/* 💳 প্রিমিয়াম লগইন কার্ড কন্টেইনার */}
       <div className="w-full max-w-md bg-[#141412] border border-zinc-800 p-6 sm:p-8 rounded-2xl shadow-2xl">
         <h2 className="text-2xl font-bold text-center text-zinc-100 mb-6">Welcome Back 🔐</h2>
         
-        {/* 📝 মেইন লগইন ফর্ম */}
+        
         <form className="w-full flex flex-col gap-4" onSubmit={handleSignin}>
           
           {/* Name Field */}
@@ -80,7 +86,7 @@ const SigninPage = () => {
           </div>
 
           {/* image */}
-            {/* Email Field */}
+          
           <div className="flex flex-col gap-1.5 w-full">
             <label className="text-zinc-300 text-sm font-medium">Image Url</label>
             <input 
@@ -134,22 +140,15 @@ const SigninPage = () => {
           <div className="flex-1 border-t border-zinc-800"></div>
         </div>
 
-        {/* 🔴 গুগল সোশ্যাল লগইন বাটন */}
-        <button 
+    
+        <button  onClick={handlegoogle}
           type="button" 
           className="w-full h-11 border border-zinc-800 hover:bg-zinc-900 text-zinc-200 font-medium flex items-center justify-center gap-2 rounded-xl text-sm transition-colors"
         >
           <FcGoogle className="text-xl" />
-          Sign in with Google
+          Register with Google
         </button>
 
-        {/* 🔗 রেজিস্টার পেজের লিংক */}
-        <p className="text-center text-sm text-zinc-400 mt-6">
-          Don't have an account?{" "}
-          <Link href="/register" className="text-lime-500 hover:underline font-medium">
-            Register here
-          </Link>
-        </p>
 
       </div>
     </div>

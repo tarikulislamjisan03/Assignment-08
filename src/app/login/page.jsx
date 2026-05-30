@@ -44,6 +44,14 @@ const {data,error}=await authClient . signIn.email({
 }
   };
 
+  
+    const handlegoogle=async()=>{
+      console.log("google")
+      const data = await authClient.signIn.social({
+      provider: "google",
+    });
+    }
+
   return (
     <div className="min-h-[80vh] bg-base-100 flex items-center justify-center p-4 text-white">
       
@@ -112,13 +120,22 @@ const {data,error}=await authClient . signIn.email({
         </div>
 
         {/* 🔴 গুগল সোশ্যাল লগইন বাটন */}
-        <button 
+        <button  onClick={handlegoogle}
           type="button" 
           className="w-full h-11 border border-zinc-800 hover:bg-zinc-900 text-zinc-200 font-medium flex items-center justify-center gap-2 rounded-xl text-sm transition-colors"
         >
           <FcGoogle className="text-xl" />
         Login in with Google
         </button>
+
+        
+        {/* 🔗 রেজিস্টার পেজের লিংক */}
+        <p className="text-center text-sm text-zinc-400 mt-6">
+          Dont have an account?{" "}
+          <Link href="/signin" className="text-lime-500 hover:underline font-medium">
+            Register here
+          </Link>
+        </p>
 
       </div>
     </div>

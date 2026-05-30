@@ -43,7 +43,7 @@ const Navbar = () => {
               Login
             </Link>
             <Link href="/signin" className="text-xs sm:text-sm text-white bg-green-700 px-3 sm:px-4 py-1.5 rounded-lg hover:opacity-90">
-              Sign In
+             Register
             </Link>
           </div>
 
@@ -75,7 +75,7 @@ const Navbar = () => {
               Login
             </Link>
             <Link href="/signin" onClick={() => setMenuOpen(false)} className="text-sm text-white bg-green-700 px-4 py-1.5 rounded-lg hover:opacity-90">
-              Sign In
+             Register
             </Link>
           </div>
         </div>
