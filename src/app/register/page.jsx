@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from 'react';
 import { BiCheck } from 'react-icons/bi';
 import { FcGoogle } from 'react-icons/fc'; 
@@ -7,59 +7,55 @@ import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
 import { authClient } from '@/lib/authclient';
 
-const SigninPage = () => {
+const RegisterPage = () => {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
 
-  const handleSignin = async (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setErrors({});
   
-    
     const formData = new FormData(e.currentTarget);
     const name = formData.get("name");
     const email = formData.get("email");
     const image = formData.get("image");
     const password = formData.get("password");
 
-  const {data,error}=await authClient.signUp.email({
-    name,
-    email,
-    image,
-    password
-  });
+    const { data, error } = await authClient.signUp.email({
+      name,
+      email,
+      image,
+      password
+    });
 
+    if (error) {
+      toast.error(error.message);
+      setLoading(false);
+      return;
+    }
 
-  if(error){
-    toast.error(error.message)
-    return;
-  }
-
-  if(data){
-    toast.success("signin successfull")
-    router.push("/login")
-  }
-
-   
+    if (data) {
+      toast.success("Registration successful!");
+      router.push("/signin");
+    }
+    setLoading(false);
   };
 
-  const handlegoogle=async()=>{
-    console.log("google")
-    const data = await authClient.signIn.social({
-    provider: "google",
-  });
-  }
+  const handleGoogle = async () => {
+    await authClient.signIn.social({
+      provider: "google",
+    });
+  };
 
   return (
     <div className="min-h-[80vh] bg-base-100 flex items-center justify-center p-4 text-white">
-      
       <div className="w-full max-w-md bg-[#141412] border border-zinc-800 p-6 sm:p-8 rounded-2xl shadow-2xl">
-        <h2 className="text-2xl font-bold text-center text-zinc-100 mb-6">Welcome Back 🔐</h2>
+        <h2 className="text-2xl font-bold text-center text-zinc-100 mb-6">Create an Account 🔐</h2>
         
-        
-        <form className="w-full flex flex-col gap-4" onSubmit={handleSignin}>
+        <form className="w-full flex flex-col gap-4" onSubmit={handleRegister}>
           
-          {/* Name Field */}
           <div className="flex flex-col gap-1.5 w-full">
             <label className="text-zinc-300 text-sm font-medium">Name</label>
             <input 
@@ -69,10 +65,8 @@ const SigninPage = () => {
               placeholder="Michael Corleone" 
               className="w-full px-4 py-2.5 bg-zinc-900 border border-zinc-700 rounded-xl text-white focus:outline-none focus:border-lime-500 transition-colors text-sm"
             />
-            
           </div>
-           
-          {/* Email Field */}
+            
           <div className="flex flex-col gap-1.5 w-full">
             <label className="text-zinc-300 text-sm font-medium">Email</label>
             <input 
@@ -85,10 +79,8 @@ const SigninPage = () => {
             {errors.email && <p className="text-xs text-red-500 mt-0.5">{errors.email}</p>}
           </div>
 
-          {/* image */}
-          
           <div className="flex flex-col gap-1.5 w-full">
-            <label className="text-zinc-300 text-sm font-medium">Image Url</label>
+            <label className="text-zinc-300 text-sm font-medium">Image URL</label>
             <input 
               required
               name="image"
@@ -96,9 +88,8 @@ const SigninPage = () => {
               placeholder="https://image.com" 
               className="w-full px-4 py-2.5 bg-zinc-900 border border-zinc-700 rounded-xl text-white focus:outline-none focus:border-lime-500 transition-colors text-sm"
             />
-            </div> 
+          </div> 
 
-          {/* Password Field */}
           <div className="flex flex-col gap-1.5 w-full">
             <label className="text-zinc-300 text-sm font-medium">Password</label>
             <input 
@@ -114,7 +105,6 @@ const SigninPage = () => {
             {errors.password && <p className="text-xs text-red-500 mt-0.5">{errors.password}</p>}
           </div>
 
-          {/* Action Buttons */}
           <div className="flex gap-3 mt-2 w-full">
             <button 
               type="submit" 
@@ -133,15 +123,14 @@ const SigninPage = () => {
           </div>
         </form>
 
-        {/* ➖ OR Divider ➖ */}
         <div className="flex items-center my-6 w-full">
           <div className="flex-1 border-t border-zinc-800"></div>
           <span className="px-3 text-[10px] text-zinc-500 uppercase tracking-wider">Or continue with</span>
           <div className="flex-1 border-t border-zinc-800"></div>
         </div>
 
-    
-        <button  onClick={handlegoogle}
+        <button 
+          onClick={handleGoogle}
           type="button" 
           className="w-full h-11 border border-zinc-800 hover:bg-zinc-900 text-zinc-200 font-medium flex items-center justify-center gap-2 rounded-xl text-sm transition-colors"
         >
@@ -149,10 +138,16 @@ const SigninPage = () => {
           Register with Google
         </button>
 
+        <p className="text-center text-sm text-zinc-400 mt-6">
+          Already have an account?{" "}
+          <Link href="/login" className="text-lime-500 hover:underline font-medium">
+            Login here
+          </Link>
+        </p>
 
       </div>
     </div>
   );
 };
 
-export default SigninPage;
+export default RegisterPage;
