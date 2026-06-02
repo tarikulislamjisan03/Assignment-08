@@ -10,7 +10,7 @@ export default async function Allcourses() {
     .slice(0, 3);
 
   return (
-    <div className="py-10 bg-black">
+    <div className="py-10 ">
       <h1 className="text-center font-bold text-3xl mt-5 text-white">
         Most Popular Courses
       </h1>
