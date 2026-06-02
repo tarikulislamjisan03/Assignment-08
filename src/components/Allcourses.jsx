@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link"; 
-
+export const dynamic = "force-dynamic";
 export default async function Allcourses() {
   const res = await fetch("https://assignment-08-pink.vercel.app/data.json");
   const datas = await res.json();
