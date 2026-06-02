@@ -1,12 +1,24 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 
+
+
 const CourseCard = ({ data }) => {
+
+
   return (
+
+
+<section>
+   
+
+ 
+
     <div className=" mb-10 shadow-xl hover:bg-purple-200 p-2 rounded-xl overflow-hidden hover:border-primary transition-all duration-300 group">
       
       {/* Image */}
-      <div className="relative h-48 w-full overflow-hidden roulg">
+      <div className="relative h-48 w-full overflow-hidden rounded-lg ">
         <Image
           src={data.image}
           alt={data.title}
@@ -53,6 +65,8 @@ const CourseCard = ({ data }) => {
 
       </div>
     </div>
+</section>
+
   );
 };
 

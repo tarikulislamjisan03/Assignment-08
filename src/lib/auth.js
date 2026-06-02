@@ -1,29 +1,24 @@
+import { mongodbAdapter } from "@better-auth/mongo-adapter";
 import { betterAuth } from "better-auth";
-import { MongoClient } from "mongodb";
-import { mongodbAdapter } from "better-auth/adapters/mongodb";
-
-const client = new MongoClient(process.env.MONGO_DB_URI);
-await client.connect();
-const db = client.db("assignment-08");
 
 export const auth = betterAuth({
-      emailAndPassword: { 
+  baseURL: process.env.BETTER_AUTH_URL,
+  emailAndPassword: { 
     enabled: true, 
   },
-      socialProviders: {
+     socialProviders: {
         google: { 
             clientId: process.env.GOOGLE_CLIENT_ID , 
-            clientSecret: process.env.GOOGLE_CLIENT_SECRET
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET, 
         }, 
     },
-    account: {
-    accountLinking: {
-      enabled: true,        // ← এটা যোগ করো
-      trustedProviders: ["google"]  // ← এটা যোগ করো
-    }
-  },
-  database: mongodbAdapter(db, {
-    // Optional: if you don't provide a client, database transactions won't be enabled.
-    client
-  }),
+  // account: {
+  //   accountLinking: {
+  //     enabled: true,
+  //     trustedProviders: ["google"]
+  //   }
+  // },
+  // database: mongodbAdapter(db, {
+  //   client
+  // }),
 });

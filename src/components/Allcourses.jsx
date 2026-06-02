@@ -1,6 +1,6 @@
 import datas from "@/data.json";
 import Image from "next/image";
-import Link from "next/link"; // ✅ প্রবলেম ১ ফিক্স: Link ইম্পোর্ট করা হলো
+import Link from "next/link"; 
 
 const Allcourses = () => {
 

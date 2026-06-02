@@ -6,7 +6,7 @@ import {Button, Input, Label, Modal, Surface, TextField} from "@heroui/react";
 export function ProfileModal() {
   return (
     <Modal>
-      <Button variant="secondary">Open Contact Form</Button>
+      <Button variant="secondary">Update Profile</Button>
       <Modal.Backdrop>
         <Modal.Container placement="auto">
           <Modal.Dialog className="sm:max-w-md">
@@ -15,11 +15,7 @@ export function ProfileModal() {
               <Modal.Icon className="bg-accent-soft text-accent-soft-foreground">
                 <Envelope className="size-5" />
               </Modal.Icon>
-              <Modal.Heading>Contact Us</Modal.Heading>
-              <p className="mt-1.5 text-sm leading-5 text-muted">
-                Fill out the form below and well get back to you. The modal adapts automatically
-                when the keyboard appears on mobile.
-              </p>
+             
             </Modal.Header>
             <Modal.Body className="p-6">
               <Surface variant="default">
@@ -28,22 +24,11 @@ export function ProfileModal() {
                     <Label>Name</Label>
                     <Input placeholder="Enter your name" />
                   </TextField>
-                  <TextField className="w-full" name="email" type="email" variant="secondary">
-                    <Label>Email</Label>
-                    <Input placeholder="Enter your email" />
+                  <TextField className="w-full" name="text" type="text" variant="secondary">
+                    <Label>Image URL</Label>
+                    <Input placeholder="Url" />
                   </TextField>
-                  <TextField className="w-full" name="phone" type="tel" variant="secondary">
-                    <Label>Phone</Label>
-                    <Input placeholder="Enter your phone number" />
-                  </TextField>
-                  <TextField className="w-full" name="company" variant="secondary">
-                    <Label>Company</Label>
-                    <Input placeholder="Enter your company name" />
-                  </TextField>
-                  <TextField className="w-full" name="message" variant="secondary">
-                    <Label>Message</Label>
-                    <Input placeholder="Enter your message" />
-                  </TextField>
+            
                 </form>
               </Surface>
             </Modal.Body>
@@ -51,7 +36,7 @@ export function ProfileModal() {
               <Button slot="close" variant="secondary">
                 Cancel
               </Button>
-              <Button slot="close">Send Message</Button>
+              <Button slot="close">Update</Button>
             </Modal.Footer>
           </Modal.Dialog>
         </Modal.Container>

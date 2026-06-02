@@ -65,8 +65,8 @@ const Navbar = () => {
             </>
           ) : (
             <div className="flex items-center gap-3">
-              <Avatar className="w-12 h-12">
-                <Avatar.Image 
+              <Avatar >
+                <Avatar.Image  className="w-10 h-10 rounded-full "
                   alt={user?.name || "User"} 
                   src={user?.image} 
                   referrerPolicy="no-referrer"  
