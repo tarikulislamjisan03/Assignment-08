@@ -1,9 +1,12 @@
-import datas from "@/data.json";
+
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-
+export const dynamic = "force-dynamic";
 const CourseDetails = async ({ params }) => {
+
+   const res = await fetch("https://assignment-08-pink.vercel.app/data.json");
+  const datas = await res.json();
   const { id } = await params;
   
 
