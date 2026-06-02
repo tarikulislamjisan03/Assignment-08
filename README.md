@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Project Name: SkillSphere
 
-## Getting Started
+### Purpose
+SkillSphere is a modern, responsive e-learning platform built with Next.js. The primary purpose of this web application is to allow users to browse popular and trending courses, filter top-rated education content, and seamlessly manage their profile updates through an interactive modal layout.
 
-First, run the development server:
+### Live URL
+🌐 [Live Deployment Link](https://assignment-08-pink.vercel.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Key Features
+* **Dynamic Course Fetching:** Fetches live course details dynamically from a Vercel-hosted JSON server.
+* **Top-Rated Filtering:** Automatically processes and displays the top 3 highest-rated courses based on user reviews.
+* **Responsive Layout:** Beautiful, fluid grid components designed using Tailwind CSS that adapt perfectly across mobile, tablet, and desktop viewports.
+* **Interactive Profile Management:** A client-side integrated profile modal using HeroUI that captures user data changes and instant image URL swaps.
+* **Dark Theme UI:** Sleek aesthetic featuring a polished zinc/dark backdrop combined with vibrantly styled lime borders and accents.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### NPM Packages Used
 
-## Learn More
+The following dependencies were utilized to build out the functionality and interface of this application:
 
-To learn more about Next.js, take a look at the following resources:
+| Package Name | Purpose |
+| :--- | :--- |
+| `next` | React Framework for production-ready server and client-side applications. |
+| `react` / `react-dom` | Core user interface structure. |
+| `@heroui/react` | Accessible, beautiful UI library utilized for implementing the profile modals, input text fields, surfaces, and custom buttons. |
+| `@gravity-ui/icons` | Icon pack supplying clean, modern icons (such as the envelope icon) inside form elements. |
+| `react-icons` | Utilized for embedding font-based visual icons like the timer symbol inside course cards. |
+| `tailwindcss` | Utility-first CSS framework for custom styling and complete responsiveness. |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Getting Started
 
-## Deploy on Vercel
+To run this project locally, execute the following commands in your terminal:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Clone the repository:
+```bashInstall dependencies:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Bash
+   npm install
+Run the development server:
+
+Bash
+   npm run dev
+   git clone <your-repository-url>
