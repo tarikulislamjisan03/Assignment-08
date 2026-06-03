@@ -119,7 +119,7 @@ const CourseDetails = async ({ params }) => {
             </div>
 
             <div className="w-full">
-              <button className="w-full py-3 sm:py-3.5 bg-lime-600 hover:bg-lime-700 text-white font-bold rounded-xl transition-colors shadow-lg shadow-lime-900/20 text-center text-sm sm:text-base">
+              <button className="w-full py-3 sm:py-4 bg-lime-600 hover:bg-lime-700 text-white font-bold rounded-xl transition-colors shadow-lg shadow-lime-900/20 text-center text-sm sm:text-base">
                 Start Learning Now
               </button>
             </div>
