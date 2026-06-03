@@ -1,6 +1,9 @@
+
 import Image from "next/image";
 import Link from "next/link"; 
+
 export const dynamic = "force-dynamic";
+
 export default async function Allcourses() {
   const res = await fetch("https://assignment-08-pink.vercel.app/data.json");
   const datas = await res.json();
@@ -15,7 +18,7 @@ export default async function Allcourses() {
         Most Popular Courses
       </h1>
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center gap-6 mt-10 px-6 max-w-7xl mx-auto"> 
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10 px-6 max-w-7xl mx-auto"> 
         {
           topRatedCourses && topRatedCourses.map((data) => {
             return (

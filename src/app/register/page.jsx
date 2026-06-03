@@ -37,8 +37,9 @@ const RegisterPage = () => {
     }
 
     if (data) {
-      toast.success("Registration successful!");
-      router.push("/signin");
+      await authClient.signOut();
+      toast.success("Registration successful!,Please Login");
+      router.push("/login");
     }
     setLoading(false);
   };

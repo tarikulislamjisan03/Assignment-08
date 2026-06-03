@@ -13,35 +13,53 @@ const Banner = () => {
       pagination={{ clickable: true }}
       navigation={true}
       loop={true}
-      className="w-full h-[300px] sm:h-[500px] md:h-[600px] lg:h-[700px]"
+      className="w-full h-[250px] sm:h-[400px] md:h-[500px] lg:h-[600px]"
     >
       <SwiperSlide>
         <div
           style={{ backgroundImage: "url('/2skill.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}
-          className="flex flex-col items-center justify-center h-full text-white text-center px-4 sm:px-8 md:px-16"
+          className="flex flex-col items-center justify-center h-full text-white text-center px-6 sm:px-12 md:px-20 lg:px-32"
         >
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4">Upgrade Your Skills Today 🚀</h1>
-          <p className="text-sm sm:text-base md:text-lg text-purple-200">Learn from the best instructors in the industry</p>
+          <div className="w-full max-w-4xl mx-auto">
+            <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-4 md:mb-6 leading-tight">
+              Upgrade Your Skills Today 🚀
+            </h1>
+            <p className="text-xs sm:text-base md:text-lg lg:text-xl text-purple-200 max-w-2xl mx-auto">
+              Learn from the best instructors in the industry
+            </p>
+          </div>
         </div>
       </SwiperSlide>
 
       <SwiperSlide>
         <div
           style={{ backgroundImage: "url('/2.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}
-          className="flex flex-col items-center justify-center h-full bg-violet-900 text-white text-center px-4 sm:px-8 md:px-16"
+          className="flex flex-col items-center justify-center h-full text-white text-center px-6 sm:px-12 md:px-20 lg:px-32"
         >
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4">Learn from Industry Experts 🎓</h1>
-          <p className="text-sm sm:text-base md:text-lg text-violet-200">Real world knowledge from real professionals</p>
+          <div className="w-full max-w-4xl mx-auto">
+            <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-4 md:mb-6 leading-tight">
+              Learn from Industry Experts 🎓
+            </h1>
+            <p className="text-xs sm:text-base md:text-lg lg:text-xl text-violet-200 max-w-2xl mx-auto">
+              Real world knowledge from real professionals
+            </p>
+          </div>
         </div>
       </SwiperSlide>
 
       <SwiperSlide>
         <div
           style={{ backgroundImage: "url('/1.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}
-          className="flex flex-col items-center justify-center h-full bg-indigo-900 text-white text-center px-4 sm:px-8 md:px-16"
+          className="flex flex-col items-center justify-center h-full text-white text-center px-6 sm:px-12 md:px-20 lg:px-32"
         >
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4">Build Real Projects 💻</h1>
-          <p className="text-sm sm:text-base md:text-lg text-indigo-200">Apply what you learn with hands-on projects</p>
+          <div className="w-full max-w-4xl mx-auto">
+            <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-4 md:mb-6 leading-tight">
+              Build Real Projects 💻
+            </h1>
+            <p className="text-xs sm:text-base md:text-lg lg:text-xl text-indigo-200 max-w-2xl mx-auto">
+              Apply what you learn with hands-on projects
+            </p>
+          </div>
         </div>
       </SwiperSlide>
     </Swiper>
